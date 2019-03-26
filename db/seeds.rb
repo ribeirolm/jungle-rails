@@ -132,5 +132,45 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+## REVIEWS
+
+puts "Creating Reviews..."
+
+Review.destroy_all
+
+Review.create!({
+  product_id: 1,
+  user_id: 1,
+  description:"This product is the best one I've purchased on Jungle!",
+  rating: 8,
+})
+
+Review.create!({
+  product_id: 2,
+  user_id: 2,
+  description:"Terrible product, it doesn't even do what its supposed to do :( ",
+  rating: 3,
+})
+
+Review.create!({
+  product_id: 3,
+  user_id:1,
+  description:"When I first got this product in the mail I thought I had made a terrible mistake, there was no way I could use it, BUT when I started to use it I found myslef using it more and more and now I use it daily! Best purchase I've ever made!",
+  rating: 10,
+})
+
+Review.create!({
+  product_id: 4,
+  user_id:2,
+  description: "DO NOT BUY THIS..terrible quality!",
+  rating: 0,
+})
+
+Review.create!({
+  product_id: 5,
+  user_id:1,
+  description:"This product is alright but I wish it had a bit more flash to it, its not as stylish as I'd like.",
+  rating: 6,
+})
 
 puts "DONE!"
