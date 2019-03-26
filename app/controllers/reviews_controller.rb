@@ -4,10 +4,8 @@ class ReviewsController < ApplicationController
         @review = @product.reviews.create(review_params)
         @review[:user_id] = current_user.id
         if @review.save
-            puts "if"
             redirect_to @product
         else
-            puts "else"
             redirect_to @product
         end
       end
